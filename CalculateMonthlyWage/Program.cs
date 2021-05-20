@@ -10,14 +10,22 @@ namespace CalculateMonthlyWage
     {
         static void Main(string[] args)
         {
-            int monthlyWage = 4234;
+            int monthlyWage = 4000;
             int months = 12;
+            int monthlyWage2 = 5000;
+            int monthlyWage3 = 6000;
             int daysInMonth = 30;
             int hoursInDay = 8;
+
+
            
-            
             CalculateYearlyWage(monthlyWage, months);
             CalculateDaysInYear(months, daysInMonth);
+            AddBonusYearlyWage(monthlyWage, months);
+            CalculateYearlyWage(monthlyWage2, months);
+            AddBonusYearlyWage(monthlyWage2, months);
+            CalculateYearlyWage(monthlyWage3, months);
+            AddBonusYearlyWage(monthlyWage3, months);
             int hoursInYear = CalculateHoursInYear(hoursInDay, months, daysInMonth);
             Console.WriteLine($"hours in year {hoursInYear}");
             Console.ReadLine();
@@ -38,7 +46,8 @@ namespace CalculateMonthlyWage
         }
         public static void AddBonusYearlyWage(int monthlyWage, int numberOfMonthsWorked)
         {
-            Console.WriteLine($"Yearly wage plus bonus: {monthlyWage * numberOfMonthsWorked}");
+            Console.WriteLine($"Yearly wage plus bonus: {monthlyWage * numberOfMonthsWorked + 97}");
+            Console.ReadLine();
         }
     }
 }
